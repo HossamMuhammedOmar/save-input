@@ -1,2 +1,2 @@
-# save-input
+# Save Input
 Chrome Extension
