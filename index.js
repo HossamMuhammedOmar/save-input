@@ -1,4 +1,4 @@
-let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"];
+let myLeads = [];
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
@@ -15,7 +15,11 @@ for (let i = 0; i < myLeads.length; i++) {
 
 function renderInputs(inputValue) {
   const li = document.createElement("li");
-  li.textContent = inputValue;
+  const a = document.createElement("a");
+  a.innerHTML = inputValue;
+  a.setAttribute("href", inputValue);
+  a.setAttribute("target", "_blank");
+  li.appendChild(a);
   if (inputValue.length != 0) {
     ulEl.appendChild(li);
     inputEl.value = "";
