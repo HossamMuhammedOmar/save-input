@@ -6,14 +6,18 @@ const ulEl = document.getElementById("ul-el");
 inputBtn.addEventListener("click", function () {
   const inputValue = inputEl.value;
   myLeads.push(inputValue);
+  renderInputs(inputValue);
+});
+
+for (let i = 0; i < myLeads.length; i++) {
+  console.log(myLeads[i]);
+}
+
+function renderInputs(inputValue) {
   const li = document.createElement("li");
   li.textContent = inputValue;
   if (inputValue.length != 0) {
     ulEl.appendChild(li);
     inputEl.value = "";
   }
-});
-
-for (let i = 0; i < myLeads.length; i++) {
-  console.log(myLeads[i]);
 }
